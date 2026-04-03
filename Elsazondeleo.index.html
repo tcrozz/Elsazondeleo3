@@ -1,0 +1,58 @@
+import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { motion } from "framer-motion";
+
+export default function RestaurantWebsite() { return ( <div className="bg-orange-50 min-h-screen text-gray-800"> {/* Header */} <header className="bg-orange-600 text-white p-6 shadow-md"> <h1 className="text-3xl font-bold">El Sazón de Leo</h1> <p className="text-sm">Sabor casero que conquista</p> </header>
+
+{/* Hero Section */}
+  <section className="p-8 text-center">
+    <motion.h2 
+      initial={{ opacity: 0, y: 20 }} 
+      animate={{ opacity: 1, y: 0 }}
+      className="text-2xl font-semibold mb-4"
+    >
+      Bienvenido a tu fonda favorita
+    </motion.h2>
+    <p className="mb-6">Disfruta de los mejores platillos mexicanos hechos con amor</p>
+    <Button className="bg-orange-600 hover:bg-orange-700">Ordenar por WhatsApp</Button>
+  </section>
+
+  {/* Menu Section */}
+  <section className="p-8 grid md:grid-cols-3 gap-6">
+    <Card className="rounded-2xl shadow-lg">
+      <CardContent className="p-4">
+        <h3 className="font-bold text-lg">Chilaquiles</h3>
+        <p>Verdes o rojos con crema, queso y cebolla</p>
+        <p className="font-semibold mt-2">$80 - $90</p>
+      </CardContent>
+    </Card>
+
+    <Card className="rounded-2xl shadow-lg">
+      <CardContent className="p-4">
+        <h3 className="font-bold text-lg">Tacos Dorados</h3>
+        <p>Pollo o papa con lechuga, crema, queso y aguacate</p>
+        <p className="font-semibold mt-2">$60</p>
+      </CardContent>
+    </Card>
+
+    <Card className="rounded-2xl shadow-lg">
+      <CardContent className="p-4">
+        <h3 className="font-bold text-lg">Enfrijoladas</h3>
+        <p>Con crema, queso, cebolla y aguacate</p>
+        <p className="font-semibold mt-2">$85</p>
+      </CardContent>
+    </Card>
+  </section>
+
+  {/* Contact Section */}
+  <section className="bg-white p-8 text-center">
+    <h2 className="text-xl font-semibold mb-4">Contáctanos</h2>
+    <p>WhatsApp: 56-41-11-71-48</p>
+    <p>Ciudad de México</p>
+  </section>
+
+  {/* Footer */}
+  <footer className="bg-orange-600 text-white text-center p-4">
+    <p>© 2026 El Sazón de Leo</p>
+  </footer>
+</div>
+
+); }
